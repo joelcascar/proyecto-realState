@@ -1,0 +1,29 @@
+{
+  "name": "14_airbnb",
+  "version": "1.0.0",
+  "description": "Aplicación de Airbnb con SASS, Gulp, CSS Grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joel Castellanos",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.0",
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.5.6",
+    "sass": "^1.37.5"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ]
+}
