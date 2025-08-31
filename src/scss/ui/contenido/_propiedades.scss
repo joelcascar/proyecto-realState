@@ -24,16 +24,19 @@
     &__imagen{
         aspect-ratio: 10/6;
         background-size: auto 150%;
-
         position: relative;
     }
+
     // ciclo for en SASS
-    @for $i from 1 through 6 {
+    /* @for $i from 1 through 6 {
         $imagen: '../img/propiedad_' + $i + '.jpg';
-        &:nth-child(#{$i}) &__imagen{
-            background-image: linear-gradient(to bottom, transparentize(v.$negro, 1) 0%, transparentize(v.$negro, .3) 100%), url($imagen);
+        &:nth-child(#$i){
+            .propiedad__imagen{
+                background-image: linear-gradient(to bottom, transparentize(v.$negro, 1) 0%, transparentize(v.$negro, .3) 100%), url($imagen);
+            }
         } 
-    }
+    } */
+ 
 
     &__nombre{
         position: absolute;
@@ -56,5 +59,47 @@
         @include m.boton(v.$primario, v.$blanco);
         display: block;
         text-transform: uppercase;
+    }
+}
+
+.notavif{
+    &.notwebp{
+        .propiedad{
+            @for $i from 1 through 6 {
+                $imagen: '../img/propiedad_' + $i + '.jpg';
+                &:nth-child(#{$i}){
+                    .propiedad__imagen{
+                        background-image: linear-gradient(to bottom, transparentize(v.$negro, 1) 0%, transparentize(v.$negro, .3) 100%), url($imagen);
+                    }
+                } 
+            }
+        }
+    }
+}
+
+
+.webp{
+    .propiedad{
+        @for $i from 1 through 6 {
+            $imagen: '../img/propiedad_' + $i + '.webp';
+            &:nth-child(#{$i}){
+                .propiedad__imagen{
+                    background-image: linear-gradient(to bottom, transparentize(v.$negro, 1) 0%, transparentize(v.$negro, .3) 100%), url($imagen);
+                }
+            } 
+        }
+    }
+}
+
+.avif{
+    .propiedad{
+        @for $i from 1 through 6 {
+            $imagen: '../img/propiedad_' + $i + '.webp';
+            &:nth-child(#{$i}){
+                .propiedad__imagen{
+                    background-image: linear-gradient(to bottom, transparentize(v.$negro, 1) 0%, transparentize(v.$negro, .3) 100%), url($imagen);
+                }
+            } 
+        }
     }
 }

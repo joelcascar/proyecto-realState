@@ -73,6 +73,7 @@ function dev(done){
     /* watch("src/scss/app.scss", css); */
     // watch de las imagenes
     watch("src/img/**/*", imagenes);
+    watch("src/js/**/*.js", JavaScript);
     done();
 }
 
